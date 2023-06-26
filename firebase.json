@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "/test/**",
-        "destination": "/huicheng_shop/**"
+        "source": "/test",
+        "destination": "/huicheng_shop/index.html"
       }
     ]
   }
