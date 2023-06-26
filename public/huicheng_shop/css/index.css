@@ -1,0 +1,539 @@
+@import"https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Cinzel&display=swap";
+
+@font-face {
+    font-family: SweiSpringCJKtc-Bold;
+    src: 
+    url(https://cdn.jsdelivr.net/gh/max32002/swei-spring@1.065/WebFont/CJK%20TC/SweiSpringCJKtc-Bold.woff) format("woff"),
+    url(https://cdn.jsdelivr.net/gh/max32002/swei-spring@1.065/WebFont/CJK%20TC/SweiSpringCJKtc-Bold.woff2) format("woff2");
+}
+
+
+
+
+
+html{
+    margin:0;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+body{
+    width:100%;
+    margin:0;
+    overflow-x: hidden;
+    background: linear-gradient(95deg, #153049 20%, #17476B 50%, #153049 80%);
+}
+
+section{
+    width:100%;
+    height:auto;
+}
+
+h3{
+  font-size: 2.5rem;
+  color:#EBCC8F;
+  letter-spacing: .2rem;
+  font-family: SweiSpringCJKtc-Bold;
+  font-weight: 200;
+  margin-block-start:0;
+  margin-block-end:0;
+  line-height: 3rem;
+  
+}
+
+h3 span{
+  display: inline-block;
+}
+
+p{
+  font-size: 1.5rem;
+  color:rgba(255, 255, 255, 0.885);
+  letter-spacing: .2rem;
+  margin-block-start:0;
+  margin-block-end:0;
+  font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* section0 home */
+
+#section0{
+    width:100%;
+    height:100vh;
+    background-image: url(pic1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homecontainer{
+    width:auto;
+    height:auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hometitle{
+    font-size:9rem;
+    line-height: 15rem;
+    background: linear-gradient(45deg, #EBCC8F 60%, #E0D8A0 65%, #F4F4D6 70%, #EBCC8F 80%);
+    background-clip: text;
+    text-emphasis-color: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-size: 200% auto;
+    font-family: SweiSpringCJKtc-Bold;
+    -webkit-animation: textGradient 3s linear infinite;
+    animation: textGradient 3s linear infinite;
+    font-weight: 500;
+    width:auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.655);
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes textGradient {
+    0% {
+      background-position: 200% 0
+    }
+  
+    100% {
+      background-position: 0 200%
+    }
+  }
+  
+  @keyframes textGradient {
+    0% {
+      background-position: 200% 0
+    }
+  
+    100% {
+      background-position: 0 200%
+    }
+  }
+
+  .hometext{
+    color:white;
+    text-align:center;
+    font-size: 2.6rem;
+    margin-top: 4%;
+    letter-spacing: .33rem;
+    line-height: 5rem;
+    display: block;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+  }
+
+  .hometextphone{
+    display: none;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+  }
+
+
+  .hometitle2{
+    color:black;
+    width:750px;
+    margin-top: 4%;
+    background: linear-gradient(90deg,#EBCC8F00 0%, #EBCC8Fb4 40%, #EBCC8Fb4 50%, #EBCC8Fb4 60%, #EBCC8F00 100%);
+    font-size: 2.3rem;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+  }
+
+  /* section1 */
+
+  #section1 .aboutcontainer{
+    width:90%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  #section1 .textbox{
+    display: block;
+  }
+
+  #section1 .textbox p{
+    text-align: center;
+    line-height: 3.5rem;
+  }
+
+  #section1 .textboxphone{
+    display:none;
+  }
+
+  #section1 .textboxphone p{
+    text-align: center;
+    line-height: 3.5rem;
+  }
+
+  #section1 .imgcontainer{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-top: 5vw;
+  }
+  
+  #section1 .casebox{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section1 .casebox .imgbox{
+    width:70%;
+    overflow: hidden;
+    border:5px solid #EBCC8F;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  #section1 .casebox .imgbox:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  #section1 .casebox .imgbox img{
+    width:100%;
+    position: absolute;
+  }
+
+  #section1 .casebox h3{
+    margin-top: 3vw;
+  }
+
+  #section1 .casebox p{
+    margin-top: .5vw;
+  }
+
+  #section1 .casebox .text{
+    margin-top: 1rem;
+  }
+
+  /* section2 content */
+
+  #section2 .contentcontainer{
+    width:90%;
+    max-width: 1280px;
+    margin:auto;
+  }
+
+  #section2 .content{
+    width:100%;
+    height:auto;
+    background-color: #113D5C;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #section2 .content .imgbox{
+    width:50%;
+    height:auto;
+  }
+
+  #section2 .content .imgbox img{
+    width:100%;
+    height:auto;
+  }
+
+  #section2 .content .textbox{
+    width:50%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #section2 .content .textbox .text{
+    margin-top: 1rem;
+  }
+
+  #section2 .content .textbox p{
+    line-height: 2.7rem;
+  }
+
+  /* section3 contact */
+  #section3{
+    width:100%;
+    height:auto;
+    background-color: #113D5C;
+  }
+
+  .contactcontainer{
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .titleenglish{
+    font-family: 'Playfair', serif;
+    font-weight: 300;
+    font-size: 5rem;
+    color:#F2CB99;
+    letter-spacing: -.2rem;
+  }
+
+  .contact .title{
+    font-size: 2rem;
+    color:white;
+    font-family: SweiSpringCJKtc-Bold;
+    letter-spacing: .1rem;
+  }
+
+  .formbox{
+    width:950px;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .formrow1, .formrow2{
+    width:48%;
+    height:auto;
+  }
+
+  .formtext{
+    color:white;
+  }
+
+  input, textarea, select{
+    width:100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.666);
+    border-radius:2px;
+  }
+
+  option{
+    color:black;
+  }
+
+  textarea{
+    height:200px;
+  }
+
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.666);
+    opacity: 1; /* Firefox */
+  }
+
+  .policy{
+    color:white;
+    font-size: 1.2rem;
+  }
+
+  .formtext{
+    color:white;
+    font-size: 1.2rem;
+  }
+
+  .submitbutton{
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(20deg, #EBCC8F 20%, #E0D8A0 70%);
+    margin-top: 50px;
+  }
+
+  footer{
+    height:50px;
+    width:100%;
+    background-color: #29292c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#808080;
+  }
+
+  /* 筆電 */
+  @media only screen and (max-width: 1280px){
+    html{
+      font-size: 10px;
+    }
+
+    .hometitle2{
+      width:650px;
+    }
+  }
+  /* ipad */
+  @media only screen and (max-width: 1024px){
+    .formbox{
+      width:750px;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    h3{
+      font-size: 1.8rem;
+      
+    }
+    /* section0 */
+    #section0{
+      height:190vw;
+      overflow-x: hidden;
+    }
+
+    .hometitle{
+      font-size: 4.6rem;
+      line-height: 6rem;
+      border-bottom: 0px;
+    }
+
+    .hometitle2{
+      width:350px;
+      font-size: 1.7rem;
+      height:50px;
+      line-height: 50px;
+      margin-top: 0px;
+    }
+
+    .hometext{
+      display: none;
+    }
+  
+    .hometextphone{
+      color:white;
+      text-align:center;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      letter-spacing: .2rem;
+      line-height: 3.5rem;
+      display: block;
+    }
+  
+
+    /* section1 */
+    #section1 .imgcontainer{
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 100px;
+    }
+
+    #section1 .casebox{
+      width:45%;
+      margin-bottom: 50px;
+    }
+
+    #section1 .textbox{
+      display: none;
+    }
+  
+    #section1 .textboxphone{
+      display:block;
+    }
+
+    #section1 .casebox .imgbox{
+      border: 2px solid #EBCC8F;
+    }
+
+    #section1 .casebox h3{
+      margin-top: 30px;
+    }
+
+    #section1 .casebox .text{
+      margin-top: 5px;
+    }
+    /* section2 */
+    #section2 .contentcontainer{
+      width:85%;
+    }
+
+    #section2 .content{
+      flex-direction: column;
+    }
+
+    #section2 .content .imgbox{
+      width:100%;
+    }
+
+    #section2 .content .textbox{
+      width:100%;
+      padding:30px;
+    }
+
+    /* contact */
+    .contactcontainer{
+      width:85%;
+      margin: auto;
+    }
+
+    .formbox{
+      width:100%;
+      flex-direction: column;
+    }
+
+    .formrow1, .formrow2{
+      width:100%;
+    }
+  }
+
+  /* thankspage */
+  #thankspagesec0{
+    width:100%;
+    height:100vh;
+    background-image: url(pic1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thnakspagefooter{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .backindexbottom{
+    color:white;
+    text-align:center;
+    font-size: 2.6rem;
+    margin-top: 100px;
+    letter-spacing: .33rem;
+    line-height: 5rem;
+    display: block;
+    font-family: "Noto Serif TC", "微軟正黑體", "Microsoft JhengHei", serif;
+    padding: 1px 20px;
+    border: 1px #ffffff solid;
+  }
+
