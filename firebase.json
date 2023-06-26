@@ -10,6 +10,10 @@
       {
         "source": "/test",
         "destination": "/huicheng_shop/index.html"
+      },
+      {
+        "source": "/test/.*",
+        "destination": "/huicheng_shop/$1"
       }
     ]
   }
