@@ -6,12 +6,16 @@ name: Deploy to GCE while main branch updated
   push:
     branches:
       - main
-  uses: google-github-actions/ssh-compute@v0.1.5
-  with:
-    instance_name: instance-1
-    zone: asia-east1-b
-    ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
-    command: |
-      cd /var/www
-      rm -rf firebase_hosting_demo
-      git clone git@github.com:tianhelin/firebase_hosting_demo.git
+jobs:
+  deploy_to_gcp:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: google-github-actions/ssh-compute@v0.1.5
+       with:
+        instance_name: instance-1
+        zone: asia-east1-b
+        ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
+        command: |
+          cd /var/www
+          rm -rf firebase_hosting_demo
+          git clone git@github.com:tianhelin/firebase_hosting_demo.git
