@@ -7,21 +7,25 @@ name: Deploy to GCE while main branch updated
     branches:
       - main
 jobs:
-  deploy_to_gcp:
+  deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: 'actions/checkout@v2'
+
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
-          workload_identity_provider: 'projects/805483161008/locations/global/workloadIdentityPools/my-pool'
+          workload_identity_provider: 'projects/805483161008/locations/global/workloadIdentityPools/my-pool/providers/my-pool-provider'
           service_account: 'deploy-service-account@huichengtw-83263.iam.gserviceaccount.com'
-     - uses: google-github-actions/ssh-compute@v0.1.5
-       with:
-        instance_name: instance-1
-        zone: asia-east1-b
-        ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
-        command: |
-          cd /var/www
-          rm -rf firebase_hosting_demo
-          git clone git@github.com:tianhelin/firebase_hosting_demo.git
+
+      - uses: google-github-actions/ssh-compute@v0.1.5
+        with:
+          project_id: 'huichengtw-83263'
+          instance_name: 'huichengtw'
+          zone: asia-east1-a
+          ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
+          command: 'cd /var/www; sudo rm -rf firebase_hosting_demo; sudo git clone git@github.com:tianhelin/firebase_hosting_demo.git;'
