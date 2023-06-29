@@ -10,6 +10,12 @@ jobs:
   deploy_to_gcp:
     runs-on: ubuntu-latest
     steps:
+      - uses: 'actions/checkout@v2'
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          workload_identity_provider: 'projects/805483161008/locations/global/workloadIdentityPools/my-pool'
+          service_account: 'deploy-service-account@huichengtw-83263.iam.gserviceaccount.com'
      - uses: google-github-actions/ssh-compute@v0.1.5
        with:
         instance_name: instance-1
